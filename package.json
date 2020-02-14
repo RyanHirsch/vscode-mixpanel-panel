@@ -5,6 +5,9 @@
   "publisher": "RyanHirsch",
   "version": "0.0.1",
   "icon": "https://ryanhirsch.github.io/vscode-mixpanel-panel/images/logo.png",
+  "repository": {
+    "url": "https://github.com/RyanHirsch/vscode-mixpanel-panel"
+  },
   "engines": {
     "vscode": "^1.42.0"
   },
