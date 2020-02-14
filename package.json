@@ -4,7 +4,7 @@
   "description": "Collection of snippets to help Mixpanel create Panel components",
   "publisher": "RyanHirsch",
   "version": "0.0.1",
-  "icon": "https://ryanhirsch.github.io/vscode-mixpanel-panel/images/logo.png",
+  "icon": "docs/images/logo.png",
   "repository": {
     "url": "https://github.com/RyanHirsch/vscode-mixpanel-panel"
   },
