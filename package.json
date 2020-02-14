@@ -3,7 +3,7 @@
   "displayName": "Mixpanel Panel",
   "description": "Collection of snippets to help Mixpanel create Panel components",
   "publisher": "RyanHirsch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "icon": "docs/images/logo.png",
   "repository": {
     "url": "https://github.com/RyanHirsch/vscode-mixpanel-panel"
@@ -18,7 +18,7 @@
     "snippets": [
       {
         "language": "typescript",
-        "path": "./snippets/snippets.json"
+        "path": "./snippets/panel-snippets.json"
       }
     ]
   }

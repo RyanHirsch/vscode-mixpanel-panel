@@ -27,11 +27,9 @@ else
   fi
 fi
 
-yarn global add vsce
-
 cd "${PROJECT_DIR}"
-vsce package
+# vsce package
 
 EXTENSION_DIR="${VSCODE_DIR}/extensions"
 
-cp "${PROJECT_DIR}/mixpanel-panel-0.0.1.vsix" "${EXTENSION_DIR}"
+# cp -R "${PROJECT_DIR}/snippets" "${EXTENSION_DIR}"

@@ -42,14 +42,25 @@
     ],
     "description": "Scaffold Panel Types"
   },
-  "Panel Attr Change": {
+  "Panel Component Attribute Changed Callback": {
     "scope": "typescript,typescriptreact",
-    "prefix": "mp:attr",
+    "prefix": "mpc:attr",
     "body": [
       "attributeChangedCallback(attr: string, oldValue: string, newValue: string) {",
       "  super.attributeChangedCallback(attr, oldValue, newValue);",
       "  $0",
       "}"
+    ]
+  },
+  "Panel Component Attributes Schema": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "mpc:schema",
+    "body": [
+      "  static get attrsSchema(): AttrsSchema<${1:name}Attrs> {",
+      "    return {",
+      "      ...super.attrsSchema,",
+      "    };",
+      "  }"
     ]
   }
 }
