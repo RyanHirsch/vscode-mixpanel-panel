@@ -1,0 +1,55 @@
+{
+  "New Panel Component": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "mp:comp",
+    "body": [
+      "import {Component, ConfigOptions, AttrsSchema} from 'panel';",
+      "",
+      "import {registerMPElement} from 'common/util/register-element';",
+      "",
+      "import {${1:name}Attrs, ${1:name}State} from './types';",
+      "import template from './index.jade';",
+      "import './index.styl';",
+      "",
+      "export default class ${1} extends Component<${1}State, {}, unknown, ${1:name}Attrs> {",
+      "  static get attrsSchema(): AttrsSchema<${1:name}Attrs> {",
+      "    return {",
+      "      ...super.attrsSchema,",
+      "    };",
+      "  }",
+      "",
+      "  get config(): ConfigOptions<${1}State, {}, ${1}Attrs> {",
+      "    return {",
+      "      template,",
+      "      defaultState: {$0},",
+      "      helpers: {},",
+      "    };",
+      "  }",
+      "}",
+      "",
+      "registerMPElement(`$2`, ${1});",
+      ""
+    ],
+    "description": "Scaffold Panel Component"
+  },
+  "New Panel Types": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "mp:types",
+    "body": [
+      "export interface ${1}State {}",
+      "export interface ${1}Attrs {}",
+      ""
+    ],
+    "description": "Scaffold Panel Types"
+  },
+  "Panel Attr Change": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "mp:attr",
+    "body": [
+      "attributeChangedCallback(attr: string, oldValue: string, newValue: string) {",
+      "  super.attributeChangedCallback(attr, oldValue, newValue);",
+      "  $0",
+      "}"
+    ]
+  }
+}
