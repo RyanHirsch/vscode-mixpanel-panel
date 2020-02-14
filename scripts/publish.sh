@@ -14,8 +14,13 @@ cd "${PROJECT_DIR}"
 PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
 
 if [ -n "$(git status --porcelain)" ]; then
-  echo "Your directory is in a dirty state, unable to publish (please ensure files are commited)";
-  exit 1;
+  echo "Your directory is in a dirty state, unable to publish (please ensure files are commited)"
+  exit 1
+fi
+
+if [ $(git tag -l "v${PACKAGE_VERSION}") ]; then
+  echo "${PACKAGE_VERSION} already exists. Did you forget to version bump?"
+  exit 1
 fi
 
 git push
